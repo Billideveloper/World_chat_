@@ -57,8 +57,7 @@ class ViewController: UIViewController {
         
         account_info.textAlignment = .center
         
-    
-        
+
     }
     
     

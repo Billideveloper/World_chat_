@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterUserVC: UIViewController {
     
@@ -44,6 +45,44 @@ class RegisterUserVC: UIViewController {
     
     
     @IBAction func register_User(_ sender: Any) {
+        
+        if let email = userEmail.text , let password = userPassword.text {
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (AuthResults, error) in
+                
+                if error != nil{
+                    print("something went wrong please try again")
+                }else{
+                    
+                   let setdiaplayname =  Auth.auth().currentUser?.createProfileChangeRequest()
+                    setdiaplayname?.displayName = self.userName.text
+                    
+                    setdiaplayname?.commitChanges(completion: { (error) in
+                        if error != nil{
+                            
+                            
+                            print("Sorry cannot update your profile name try it again ")
+                        }else{
+                            
+                            
+                            
+                            print("your profile is sucessfully updated with your name")
+                        }
+                    })
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+    
+        
+        
         
         
         

@@ -18,8 +18,8 @@
 		186A08C024C86E8900A06414 /* World_chat_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08BF24C86E8900A06414 /* World_chat_UITests.swift */; };
 		186A08D324C86F8F00A06414 /* customUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08D224C86F8F00A06414 /* customUIExtensions.swift */; };
 		186A08D524C86FBD00A06414 /* customUIIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08D424C86FBD00A06414 /* customUIIcons.swift */; };
-		186A08D724C8987500A06414 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 186A08D624C8987500A06414 /* GoogleService-Info.plist */; };
 		186A08D924C96BD700A06414 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08D824C96BD700A06414 /* RegisterUserVC.swift */; };
+		18939A8224C9BBE90035F8AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */; };
 		57387842654015E320849A66 /* Pods_World_chat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90EEAE278CE6783567E78F33 /* Pods_World_chat_Tests.framework */; };
 		A3A614D020A36C2DF827B623 /* Pods_World_chat_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0947E1656B9B181149572782 /* Pods_World_chat_.framework */; };
 		B404F97F14AC88A1AF7E1A91 /* Pods_World_chat__World_chat_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE0BAEDDEF6A8AAE243327 /* Pods_World_chat__World_chat_UITests.framework */; };
@@ -62,8 +62,8 @@
 		186A08C124C86E8900A06414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		186A08D224C86F8F00A06414 /* customUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIExtensions.swift; sourceTree = "<group>"; };
 		186A08D424C86FBD00A06414 /* customUIIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIIcons.swift; sourceTree = "<group>"; };
-		186A08D624C8987500A06414 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		186A08D824C96BD700A06414 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
+		18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2F670294C2F2DEDF715ECC16 /* Pods-World_chat_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_/Pods-World_chat_.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2547CE5FCE7F847419DE08 /* Pods-World_chat_-World_chat_UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0148E3CD2313626B24F6E8 /* Pods-World_chat_-World_chat_UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.release.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 				186A08A624C86E8900A06414 /* Assets.xcassets */,
 				186A08A824C86E8900A06414 /* LaunchScreen.storyboard */,
 				186A08AB24C86E8900A06414 /* Info.plist */,
+				18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */,
 				186A08A324C86E8700A06414 /* World_chat_.xcdatamodeld */,
-				186A08D624C8987500A06414 /* GoogleService-Info.plist */,
 			);
 			path = World_chat_;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				186A08AA24C86E8900A06414 /* LaunchScreen.storyboard in Resources */,
-				186A08D724C8987500A06414 /* GoogleService-Info.plist in Resources */,
+				18939A8224C9BBE90035F8AC /* GoogleService-Info.plist in Resources */,
 				186A08A724C86E8900A06414 /* Assets.xcassets in Resources */,
 				186A08A224C86E8700A06414 /* Main.storyboard in Resources */,
 			);

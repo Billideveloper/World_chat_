@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'World_chat_' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,8 +7,11 @@ target 'World_chat_' do
 
   # Pods for World_chat_
 
-
-pod 'Firebase/Auth'
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'World_chat_Tests' do
     inherit! :search_paths
