@@ -1,0 +1,6 @@
+framework module Pods_World_chat_ {
+  umbrella header "Pods-World_chat_-umbrella.h"
+
+  export *
+  module * { export * }
+}
