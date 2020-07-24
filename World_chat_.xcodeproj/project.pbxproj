@@ -20,6 +20,8 @@
 		186A08D524C86FBD00A06414 /* customUIIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08D424C86FBD00A06414 /* customUIIcons.swift */; };
 		186A08D924C96BD700A06414 /* RegisterUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A08D824C96BD700A06414 /* RegisterUserVC.swift */; };
 		18939A8224C9BBE90035F8AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */; };
+		18939AC524CA8F970035F8AC /* Authentiction_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18939AC424CA8F970035F8AC /* Authentiction_Model.swift */; };
+		18939AC724CAA2530035F8AC /* chatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18939AC624CAA2530035F8AC /* chatVC.swift */; };
 		57387842654015E320849A66 /* Pods_World_chat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90EEAE278CE6783567E78F33 /* Pods_World_chat_Tests.framework */; };
 		A3A614D020A36C2DF827B623 /* Pods_World_chat_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0947E1656B9B181149572782 /* Pods_World_chat_.framework */; };
 		B404F97F14AC88A1AF7E1A91 /* Pods_World_chat__World_chat_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE0BAEDDEF6A8AAE243327 /* Pods_World_chat__World_chat_UITests.framework */; };
@@ -64,6 +66,8 @@
 		186A08D424C86FBD00A06414 /* customUIIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customUIIcons.swift; sourceTree = "<group>"; };
 		186A08D824C96BD700A06414 /* RegisterUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserVC.swift; sourceTree = "<group>"; };
 		18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		18939AC424CA8F970035F8AC /* Authentiction_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentiction_Model.swift; sourceTree = "<group>"; };
+		18939AC624CAA2530035F8AC /* chatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatVC.swift; sourceTree = "<group>"; };
 		2F670294C2F2DEDF715ECC16 /* Pods-World_chat_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_/Pods-World_chat_.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2547CE5FCE7F847419DE08 /* Pods-World_chat_-World_chat_UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0148E3CD2313626B24F6E8 /* Pods-World_chat_-World_chat_UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.release.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				186A089E24C86E8700A06414 /* ViewController.swift */,
 				186A08D824C96BD700A06414 /* RegisterUserVC.swift */,
+				18939AC624CAA2530035F8AC /* chatVC.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				186A08D224C86F8F00A06414 /* customUIExtensions.swift */,
 				186A08D424C86FBD00A06414 /* customUIIcons.swift */,
+				18939AC424CA8F970035F8AC /* Authentiction_Model.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -450,6 +456,8 @@
 				186A089F24C86E8700A06414 /* ViewController.swift in Sources */,
 				186A089B24C86E8700A06414 /* AppDelegate.swift in Sources */,
 				186A08A524C86E8700A06414 /* World_chat_.xcdatamodeld in Sources */,
+				18939AC524CA8F970035F8AC /* Authentiction_Model.swift in Sources */,
+				18939AC724CAA2530035F8AC /* chatVC.swift in Sources */,
 				186A089D24C86E8700A06414 /* SceneDelegate.swift in Sources */,
 				186A08D324C86F8F00A06414 /* customUIExtensions.swift in Sources */,
 				186A08D524C86FBD00A06414 /* customUIIcons.swift in Sources */,

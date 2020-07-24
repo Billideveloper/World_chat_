@@ -24,6 +24,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hse-NS-56i"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="83x-3c-Ta8">
                                 <rect key="frame" x="10" y="64" width="394" height="120"/>
@@ -84,6 +87,7 @@
                         <outlet property="password" destination="6P1-zI-m1B" id="GXM-j6-bK2"/>
                         <outlet property="welcome_Action" destination="v8K-mw-U7B" id="ybO-aK-vEx"/>
                         <segue destination="ytu-cb-rsM" kind="show" identifier="Register" id="c33-Et-RCb"/>
+                        <segue destination="BDT-UU-T13" kind="show" identifier="chat" id="88H-VG-Ws8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -192,7 +196,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHM-8W-00h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1398.5507246376812" y="10.714285714285714"/>
+            <point key="canvasLocation" x="2309" y="751"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="gXl-gf-VSa">
+            <objects>
+                <viewController id="BDT-UU-T13" customClass="chatVC" customModule="World_chat_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dSh-T7-naP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ix9-A0-DOg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gpt-Bj-bIF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-jn-j7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jqL-Qf-V5f">

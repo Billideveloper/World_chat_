@@ -24,9 +24,8 @@ class RegisterUserVC: UIViewController {
     @IBOutlet weak var reenterpassword: UITextField!
     
     
-    
-    
     var design = UIObjectsdesigns()
+    var authUser = Authentiction_Model()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,45 +45,11 @@ class RegisterUserVC: UIViewController {
     
     @IBAction func register_User(_ sender: Any) {
         
-        if let email = userEmail.text , let password = userPassword.text {
+        if let email = userEmail.text , let password = userPassword.text , let name = userName.text{
             
-            Auth.auth().createUser(withEmail: email, password: password) { (AuthResults, error) in
-                
-                if error != nil{
-                    print("something went wrong please try again")
-                }else{
-                    
-                   let setdiaplayname =  Auth.auth().currentUser?.createProfileChangeRequest()
-                    setdiaplayname?.displayName = self.userName.text
-                    
-                    setdiaplayname?.commitChanges(completion: { (error) in
-                        if error != nil{
-                            
-                            
-                            print("Sorry cannot update your profile name try it again ")
-                        }else{
-                            
-                            
-                            
-                            print("your profile is sucessfully updated with your name")
-                        }
-                    })
-                    self.navigationController?.popToRootViewController(animated: true)
-                }
-                
-            }
-            
-            
+            authUser.registeruser(email: email, password: password, name: name, controller: self)
             
         }
-        
-        
-        
-    
-        
-        
-        
-        
         
     }
     

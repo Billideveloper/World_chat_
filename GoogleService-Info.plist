@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>66459251167-e41vth8dedjaka4mv4q34jffj0f00g2k.apps.googleusercontent.com</string>
+	<string>857270347965-9cqe94ce3ju3ih0ea8v45cq1rbm1j2sa.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.66459251167-e41vth8dedjaka4mv4q34jffj0f00g2k</string>
+	<string>com.googleusercontent.apps.857270347965-9cqe94ce3ju3ih0ea8v45cq1rbm1j2sa</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBNAh-n0ijYmkR24QSfjYiPXOLBNkfNWSs</string>
+	<string>AIzaSyDsOEmaRl4u_--shBQGYZTJit84Ha5y1G4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>66459251167</string>
+	<string>857270347965</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Billidevelopers.World-chat-</string>
 	<key>PROJECT_ID</key>
-	<string>signin-d92e8</string>
+	<string>worldchat-10925</string>
 	<key>STORAGE_BUCKET</key>
-	<string>signin-d92e8.appspot.com</string>
+	<string>worldchat-10925.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:66459251167:ios:922b091eb0d8abec5f946a</string>
+	<string>1:857270347965:ios:08b189c657a874ddd6afd4</string>
 	<key>DATABASE_URL</key>
-	<string>https://signin-d92e8.firebaseio.com</string>
+	<string>https://worldchat-10925.firebaseio.com</string>
 </dict>
 </plist>
