@@ -69,4 +69,25 @@ struct Authentiction_Model {
         
     }
     
+    
+    //MARK: - cheackuserauthstate
+    
+    func cheackuserAuthState() -> Bool{
+        
+        if Auth.auth().currentUser != nil{
+            
+            
+            return true
+            
+        }else{
+            
+
+            return false
+            
+        }
+    }
+    
+    
+    
+    
 }
