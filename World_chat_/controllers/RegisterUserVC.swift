@@ -11,6 +11,8 @@ import FirebaseAuth
 
 class RegisterUserVC: UIViewController {
     
+    //MARK: - UIconnections Outlets
+    
     @IBOutlet weak var registerbtn: UIButton!
     
     @IBOutlet weak var info_Label: UILabel!
@@ -24,21 +26,41 @@ class RegisterUserVC: UIViewController {
     @IBOutlet weak var reenterpassword: UITextField!
     
     
+    //MARK: - variables and constatnts
+    
+    
     var design = UIObjectsdesigns()
+    
     var authUser = Authentiction_Model()
+    
+    
+    //MARK: - view methods
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.hidesBackButton = true
+        
 
         setupUI()
       
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+//MARK: - UIconnection Actions
 
 
     @IBAction func dismiss_VC(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
+
     }
     
     
@@ -53,7 +75,7 @@ class RegisterUserVC: UIViewController {
         
     }
     
-    
+    //MARK: - UIMethods
     
     func setupUI(){
         

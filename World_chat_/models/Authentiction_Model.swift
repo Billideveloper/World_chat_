@@ -37,7 +37,7 @@ struct Authentiction_Model {
                     }
                     
                 })
-                controller.navigationController?.popToRootViewController(animated: true)
+                controller.navigationController?.popViewController(animated: true)
             }else{
                 
                 print("Did not register user")
@@ -57,7 +57,7 @@ struct Authentiction_Model {
             if error == nil{
                 
                 print("Sucessfully signed in user")
-                controller.performSegue(withIdentifier: "chat", sender: nil)
+                controller.navigationController?.popToRootViewController(animated: true)
             }
             else{
                 print("Sorry there is somethig error while signing in with email and password please try again with correct email and password")

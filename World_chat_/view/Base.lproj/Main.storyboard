@@ -80,6 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vi0-7C-IZY"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="account_info" destination="3j7-xm-VRE" id="PZZ-Sn-5Kh"/>
                         <outlet property="continue_btn" destination="GUx-1r-kWI" id="HRi-C5-NZU"/>
@@ -87,12 +88,11 @@
                         <outlet property="password" destination="6P1-zI-m1B" id="GXM-j6-bK2"/>
                         <outlet property="welcome_Action" destination="v8K-mw-U7B" id="ybO-aK-vEx"/>
                         <segue destination="ytu-cb-rsM" kind="show" identifier="Register" id="c33-Et-RCb"/>
-                        <segue destination="YJm-eA-4RJ" kind="show" identifier="chat" id="WeV-SD-fTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="11"/>
+            <point key="canvasLocation" x="2954" y="127"/>
         </scene>
         <!--Register UserVC-->
         <scene sceneID="1rR-8j-ETU">
@@ -197,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHM-8W-00h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="708"/>
+            <point key="canvasLocation" x="3739" y="127"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="gXl-gf-VSa">
@@ -209,23 +209,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ix9-A0-DOg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Gpt-Bj-bIF"/>
+                    <navigationItem key="navigationItem" id="Gpt-Bj-bIF">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="qUS-De-Ycs">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logout_btn:" destination="BDT-UU-T13" id="7MK-1o-Y69"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="Pt7-8X-m3v" kind="show" identifier="signin" id="gqp-rP-7UC"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signme" id="Svr-iQ-peH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bZ-jn-j7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3148" y="-587"/>
+            <point key="canvasLocation" x="2954" y="-587"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dId-LS-mq9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="YJm-eA-4RJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YJm-eA-4RJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="e6N-b7-LuD"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wIb-LQ-na0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -236,25 +246,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uck-NG-6oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2233" y="-587"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="J9z-rr-OTM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Pt7-8X-m3v" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="x4C-sf-yKI"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BCA-JS-lfm">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Axx-2Y-8y1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcg-Mz-Xnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="676.81159420289862" y="10.714285714285714"/>
         </scene>
     </scenes>
     <resources>

@@ -11,9 +11,8 @@ import Firebase
 
 class chatVC: UIViewController {
     
-    
-    
-    
+    let currentuser = Auth.auth().currentUser
+
     var authUser = Authentiction_Model()
     
     //MARK: - view methods
@@ -22,17 +21,20 @@ class chatVC: UIViewController {
         super.viewDidLoad()
         
         
+        self.navigationController?.isNavigationBarHidden = false
+        setupUI()
         
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         
+        print("we are at chatVC")
         setupUserAuthstate()
         
     }
     
-    //MARK: - user Authstate
+    //MARK: - Cheacking User Authstates
     
     
     func setupUserAuthstate(){
@@ -41,20 +43,42 @@ class chatVC: UIViewController {
         
         if userState == true{
             
-            print("User is allready logged in")
-            
             self.navigationController?.popToRootViewController(animated: true)
             
         }else{
             
-            print("please signIn")
+            self.performSegue(withIdentifier: "signme", sender: self)
             
-            self.navigationController?.performSegue(withIdentifier: "signin", sender: nil)
         }
+        
+    }
+    
+    
+    
+    func setupUI(){
+        
+        navigationItem.hidesBackButton = true
+        navigationItem.title = currentuser?.displayName
         
         
     }
     
+    
+    
+    
+    @IBAction func logout_btn(_ sender: Any) {
+        
+            let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            
+            self.performSegue(withIdentifier: "signme", sender: self)
+            
+        } catch let signOutError as NSError {
+            
+          print ("Error signing out: %@", signOutError)
+        }
+    }
     
   
     

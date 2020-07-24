@@ -35,10 +35,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        
+        
         setupUI()
         settapgesture()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+
     
     //MARK: - setupUI Method
     
