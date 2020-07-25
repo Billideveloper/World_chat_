@@ -95,7 +95,7 @@ class chatVC: UIViewController {
         
         
         
-        db.collection(F.WorldMessages).addSnapshotListener{ (Msanpshot, error) in
+        db.collection(F.WorldMessages).order(by: F.MessageDate).addSnapshotListener{ (Msanpshot, error) in
             
             self.messages = []
             
