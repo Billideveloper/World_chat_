@@ -8,10 +8,25 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class chatVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var messagefield: UITextField!
+    
+    
+    @IBOutlet weak var sendMessage: UIButton!
+    
+    let db = Firestore.firestore()
+    
+    
     let currentuser = Auth.auth().currentUser
+    
+    var messages : [Message] = [
+    ]
 
     var authUser = Authentiction_Model()
     
@@ -29,7 +44,7 @@ class chatVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print("we are at chatVC")
+        
         setupUserAuthstate()
         
     }
@@ -57,11 +72,55 @@ class chatVC: UIViewController {
     
     func setupUI(){
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        // registered customtableview cell and then move to tableview data source method cellforrowAt
+        // and assign it as customMessage Cell
+        
+        tableView.register(UINib(nibName: Messages.cellNibName, bundle: nil), forCellReuseIdentifier: Messages.CellIdentifier)
+        
         navigationItem.hidesBackButton = true
         navigationItem.title = currentuser?.displayName
         
         
     }
+    
+    
+    
+    
+    @IBAction func send_Message_Pressed(_ sender: Any) {
+        
+        if let message = messagefield.text , let sendername = Auth.auth().currentUser?.displayName , let senderemail = Auth.auth().currentUser?.email{
+            
+            
+            let mymessagedata = [F.senderName: sendername, F.senderEmail :senderemail,
+                                 F.MessageDate: Date().timeIntervalSince1970, F.Message_body : message
+                ] as [String : Any]
+            
+            
+            db.collection(F.WorldMessages).addDocument(data: mymessagedata) { (error) in
+                
+                if let e = error{
+                    print(e.localizedDescription)
+                }else{
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.messagefield.text = ""
+                    }
+                }
+                
+                
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
     
     
     
