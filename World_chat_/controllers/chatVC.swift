@@ -44,7 +44,7 @@ class chatVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        
+        navigationItem.title = currentuser?.displayName
         setupUserAuthstate()
         
     }
@@ -68,13 +68,14 @@ class chatVC: UIViewController {
         
     }
     
+    //MARK: - setup UI method
     
     
     func setupUI(){
         
         
         tableView.dataSource = self
-        tableView.delegate = self
+        
         
         // registered customtableview cell and then move to tableview data source method cellforrowAt
         // and assign it as customMessage Cell
@@ -82,102 +83,22 @@ class chatVC: UIViewController {
         tableView.register(UINib(nibName: Messages.cellNibName, bundle: nil), forCellReuseIdentifier: Messages.CellIdentifier)
         
         navigationItem.hidesBackButton = true
-        navigationItem.title = currentuser?.displayName
         
         loadMessages()
         
         
     }
     
-    
-    
-    func loadMessages(){
-        
-        
-        
-        db.collection(F.WorldMessages).order(by: F.MessageDate).addSnapshotListener{ (Msanpshot, error) in
-            
-            self.messages = []
-            
-            if error != nil{
-                
-               print("Sorry Can't Load Messages")
-                
-            }
-            
-            if let snapsdocs = Msanpshot?.documents{
-                
-                for doc in snapsdocs{
-                    
-            
-                    let data = doc.data()
-                    
-                   if let senderName = data[F.senderName] as? String
-                    ,let senderEmail = data[F.senderEmail] as? String
-                    ,let message = data[F.Message_body] as? String
-                    ,let messageDate = data[F.MessageDate] as? Double{
-                    
-                    let newMessage = Message(senderName: senderName, senderEmail: senderEmail, senderMessage: message, senderDate: messageDate)
-                    
-                    self.messages.append(newMessage)
-                    
-                    
-                    DispatchQueue.main.async {
-                        
-                        self.tableView.reloadData()
-                    }
-                    
-                    
-                    }
-                    
-                    
-                    
-                }
-                
-            }
-        
-            
-        }
-        
-        
-        
-    }
-    
+
+    //MARK: - UIfunctions
     
     
     
     @IBAction func send_Message_Pressed(_ sender: Any) {
         
-        if let message = messagefield.text , let sendername = Auth.auth().currentUser?.displayName , let senderemail = Auth.auth().currentUser?.email{
-            
-            
-            let mymessagedata = [F.senderName: sendername, F.senderEmail :senderemail,
-                                 F.MessageDate: Date().timeIntervalSince1970, F.Message_body : message
-                ] as [String : Any]
-            
-            
-            db.collection(F.WorldMessages).addDocument(data: mymessagedata) { (error) in
-                
-                if let e = error{
-                    print(e.localizedDescription)
-                }else{
-                    
-                    
-                    DispatchQueue.main.async {
-                        self.messagefield.text = ""
-                    }
-                }
-                
-                
-            }
-        }
-        
-        
+        sendMessages()
         
     }
-    
-    
-    
     
     
     

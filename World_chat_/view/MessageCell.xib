@@ -132,10 +132,12 @@
             <connections>
                 <outlet property="anotherUserName" destination="sa9-yb-tPF" id="Mg6-AF-9Ea"/>
                 <outlet property="anotheruserImage" destination="bHC-sA-Ztg" id="atJ-Dv-4Wx"/>
+                <outlet property="leftUserView" destination="hSp-rP-sO3" id="sML-xu-fVe"/>
                 <outlet property="loggedInUserImage" destination="SLI-kd-kLY" id="kXL-t3-P9b"/>
                 <outlet property="loggedInUserName" destination="lkB-CP-YTB" id="7BJ-hI-XXW"/>
                 <outlet property="message" destination="0OU-In-lMS" id="EQV-GQ-6c3"/>
                 <outlet property="message_Background" destination="xqT-Lz-LbD" id="oC4-wC-iMU"/>
+                <outlet property="rightUserView" destination="Lb1-zY-WEj" id="qdr-qI-OsM"/>
             </connections>
             <point key="canvasLocation" x="236.95652173913047" y="27.455357142857142"/>
         </tableViewCell>

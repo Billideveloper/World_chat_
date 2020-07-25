@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -36,7 +37,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        
+        navigationItem.title = Auth.auth().currentUser?.displayName
+    
         
         setupUI()
         settapgesture()
@@ -71,9 +73,6 @@ class ViewController: UIViewController {
         
 
     }
-    
-    
-    
     
     
     

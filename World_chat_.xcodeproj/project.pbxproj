@@ -177,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				186A08A024C86E8700A06414 /* Main.storyboard */,
-				18939ACE24CAFB5C0035F8AC /* MessageCell.swift */,
 				18939ACF24CAFB5C0035F8AC /* MessageCell.xib */,
 			);
 			path = view;
@@ -201,6 +200,7 @@
 				18939AC424CA8F970035F8AC /* Authentiction_Model.swift */,
 				18939ACA24CAF5E40035F8AC /* Message_Model.swift */,
 				18939ACC24CAF79D0035F8AC /* chatVCExtension.swift */,
+				18939ACE24CAFB5C0035F8AC /* MessageCell.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";

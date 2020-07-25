@@ -10,21 +10,20 @@ import UIKit
 
 class MessageCell: UITableViewCell {
     
-    
-    @IBOutlet weak var Another_User: UIStackView!
+  
     
     @IBOutlet weak var anotheruserImage: UIImageView!
     
     @IBOutlet weak var anotherUserName: UILabel!
     
+    @IBOutlet weak var leftUserView: UIView!
     
-    @IBOutlet weak var Logged_IN_User: UIStackView!
+    @IBOutlet weak var rightUserView: UIView!
     
     @IBOutlet weak var loggedInUserImage: UIImageView!
     
     @IBOutlet weak var loggedInUserName: UILabel!
     
-
     @IBOutlet weak var message_Background: UIView!
     
     @IBOutlet weak var message: UILabel!
