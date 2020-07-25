@@ -72,6 +72,7 @@ class chatVC: UIViewController {
     
     func setupUI(){
         
+        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -82,6 +83,62 @@ class chatVC: UIViewController {
         
         navigationItem.hidesBackButton = true
         navigationItem.title = currentuser?.displayName
+        
+        loadMessages()
+        
+        
+    }
+    
+    
+    
+    func loadMessages(){
+        
+        
+        
+        db.collection(F.WorldMessages).addSnapshotListener{ (Msanpshot, error) in
+            
+            self.messages = []
+            
+            if error != nil{
+                
+               print("Sorry Can't Load Messages")
+                
+            }
+            
+            if let snapsdocs = Msanpshot?.documents{
+                
+                for doc in snapsdocs{
+                    
+            
+                    let data = doc.data()
+                    
+                   if let senderName = data[F.senderName] as? String
+                    ,let senderEmail = data[F.senderEmail] as? String
+                    ,let message = data[F.Message_body] as? String
+                    ,let messageDate = data[F.MessageDate] as? Double{
+                    
+                    let newMessage = Message(senderName: senderName, senderEmail: senderEmail, senderMessage: message, senderDate: messageDate)
+                    
+                    self.messages.append(newMessage)
+                    
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.tableView.reloadData()
+                    }
+                    
+                    
+                    }
+                    
+                    
+                    
+                }
+                
+            }
+        
+            
+        }
+        
         
         
     }

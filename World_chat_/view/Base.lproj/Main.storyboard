@@ -208,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ffw-dU-Ef5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="726"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E46-HK-0nP">
@@ -219,7 +219,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LW-4z-Noo">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LW-4z-Noo">
                                         <rect key="frame" x="354" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="5A9-PZ-G7h"/>
@@ -239,13 +239,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="bottom" secondItem="ix9-A0-DOg" secondAttribute="bottom" id="7qU-xl-giX"/>
+                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="leading" secondItem="ix9-A0-DOg" secondAttribute="leading" id="AUx-f0-QGg"/>
                             <constraint firstItem="ix9-A0-DOg" firstAttribute="trailing" secondItem="E46-HK-0nP" secondAttribute="trailing" constant="10" id="J9y-fL-zYM"/>
-                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="trailing" secondItem="ix9-A0-DOg" secondAttribute="trailing" id="LhA-0p-xIK"/>
+                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="trailing" secondItem="ix9-A0-DOg" secondAttribute="trailing" id="PGo-fW-9to"/>
+                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="top" secondItem="ix9-A0-DOg" secondAttribute="top" id="YTb-xm-1Rj"/>
                             <constraint firstItem="ix9-A0-DOg" firstAttribute="bottom" secondItem="E46-HK-0nP" secondAttribute="bottom" id="ZBB-D4-vDx"/>
-                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="leading" secondItem="ix9-A0-DOg" secondAttribute="leading" id="g1m-Yy-knL"/>
                             <constraint firstItem="E46-HK-0nP" firstAttribute="leading" secondItem="ix9-A0-DOg" secondAttribute="leading" constant="10" id="mxJ-3g-j3u"/>
-                            <constraint firstItem="Ffw-dU-Ef5" firstAttribute="top" secondItem="ix9-A0-DOg" secondAttribute="top" id="sLY-GI-r8A"/>
+                            <constraint firstItem="E46-HK-0nP" firstAttribute="top" secondItem="Ffw-dU-Ef5" secondAttribute="bottom" constant="8" id="w3X-sF-1Ws"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ix9-A0-DOg"/>
                     </view>

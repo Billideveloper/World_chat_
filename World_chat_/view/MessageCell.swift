@@ -18,16 +18,13 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var anotherUserName: UILabel!
     
     
-    
-
     @IBOutlet weak var Logged_IN_User: UIStackView!
     
     @IBOutlet weak var loggedInUserImage: UIImageView!
     
     @IBOutlet weak var loggedInUserName: UILabel!
     
-    
-    
+
     @IBOutlet weak var message_Background: UIView!
     
     @IBOutlet weak var message: UILabel!

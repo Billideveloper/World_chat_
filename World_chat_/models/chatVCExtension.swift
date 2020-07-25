@@ -17,10 +17,12 @@ extension chatVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Messages.CellIdentifier , for: indexPath) as! MessageCell
         
+        cell.message.text = message.senderMessage
     
-
         return cell
         
     }

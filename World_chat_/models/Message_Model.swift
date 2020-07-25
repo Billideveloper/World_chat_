@@ -11,6 +11,8 @@ import Foundation
 struct Message {
     
     let senderName: String
+    let senderEmail: String
     let senderMessage: String
+    let senderDate: Double
     
 }
