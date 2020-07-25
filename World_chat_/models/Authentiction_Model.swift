@@ -57,7 +57,8 @@ struct Authentiction_Model {
             if error == nil{
                 
                 print("Sucessfully signed in user")
-                controller.navigationController?.popToRootViewController(animated: true)
+                controller.navigationItem.title = Auth.auth().currentUser?.displayName
+                controller.performSegue(withIdentifier: "home", sender: nil)
             }
             else{
                 print("Sorry there is somethig error while signing in with email and password please try again with correct email and password")
@@ -87,6 +88,15 @@ struct Authentiction_Model {
         }
     }
     
+    
+    func sendMessage(state: Bool) -> Bool{
+        
+        if state == true{
+            return true
+        }else{
+            return false
+        }
+    }
     
     
     

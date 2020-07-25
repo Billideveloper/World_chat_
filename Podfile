@@ -12,6 +12,7 @@ target 'World_chat_' do
   
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
 
   target 'World_chat_Tests' do
     inherit! :search_paths

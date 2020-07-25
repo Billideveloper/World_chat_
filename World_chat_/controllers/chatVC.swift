@@ -8,10 +8,25 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class chatVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBOutlet weak var messagefield: UITextField!
+    
+    
+    @IBOutlet weak var sendMessage: UIButton!
+    
+    let db = Firestore.firestore()
+    
+    
     let currentuser = Auth.auth().currentUser
+    
+    var messages : [Message] = [
+    ]
 
     var authUser = Authentiction_Model()
     
@@ -29,7 +44,7 @@ class chatVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print("we are at chatVC")
+        navigationItem.title = currentuser?.displayName
         setupUserAuthstate()
         
     }
@@ -53,13 +68,35 @@ class chatVC: UIViewController {
         
     }
     
+    //MARK: - setup UI method
     
     
     func setupUI(){
         
-        navigationItem.hidesBackButton = true
-        navigationItem.title = currentuser?.displayName
         
+        tableView.dataSource = self
+        
+        
+        // registered customtableview cell and then move to tableview data source method cellforrowAt
+        // and assign it as customMessage Cell
+        
+        tableView.register(UINib(nibName: Messages.cellNibName, bundle: nil), forCellReuseIdentifier: Messages.CellIdentifier)
+        
+        navigationItem.hidesBackButton = true
+        
+        loadMessages()
+        
+        
+    }
+    
+
+    //MARK: - UIfunctions
+    
+    
+    
+    @IBAction func send_Message_Pressed(_ sender: Any) {
+        
+        sendMessages()
         
     }
     
