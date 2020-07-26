@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
 
@@ -62,10 +62,10 @@ class ViewController: UIViewController {
         
         password.setIconleft(UIImage(named: "passwordicon")!)
         
-        email.setborder()
-        password.setborder()
+        email.setalert(UIColor(named: "RecieverColor")!)
+        password.setalert(UIColor(named: "RecieverColor")!)
         
-        continue_btn.setbutton(.black)
+        continue_btn.setbutton(UIColor(named: "RecieverColor")!)
         
         account_info.attributedText = design.setcustomlabel(title: "Don't have Account", subtitle: "   Register here ", titlefont: 14, subtitlefont: 12, titlecolor: .black, subtitlecolor: UIColor(white: 0, alpha: 0.45))
         

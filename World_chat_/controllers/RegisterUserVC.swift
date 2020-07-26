@@ -81,10 +81,10 @@ class RegisterUserVC: UIViewController {
         
         info_Label.attributedText = design.setcustomlabel(title: "Register Here", subtitle: "", titlefont: 22, subtitlefont: 10, titlecolor: .black, subtitlecolor: .black)
         
-        userEmail.setborder()
-        userName.setborder()
-        userPassword.setborder()
-        reenterpassword.setborder()
+        userEmail.setalert(UIColor(named: "RecieverColor")!)
+        userName.setalert(UIColor(named: "RecieverColor")!)
+        userPassword.setalert(UIColor(named: "RecieverColor")!)
+        reenterpassword.setalert(UIColor(named: "RecieverColor")!)
         
         userName.setIconleft(UIImage(named: "continue_btn")!)
         
@@ -94,7 +94,7 @@ class RegisterUserVC: UIViewController {
         
         reenterpassword.setIconleft(UIImage(named: "passwordicon")!)
         
-        registerbtn.setbutton(.black)
+        registerbtn.setbutton(UIColor(named: "RecieverColor")!)
         
     }
     

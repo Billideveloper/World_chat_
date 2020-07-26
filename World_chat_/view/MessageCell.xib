@@ -74,11 +74,6 @@
                                     <constraint firstItem="0OU-In-lMS" firstAttribute="top" secondItem="xqT-Lz-LbD" secondAttribute="top" constant="12" id="fCe-R2-DZl"/>
                                     <constraint firstItem="0OU-In-lMS" firstAttribute="leading" secondItem="xqT-Lz-LbD" secondAttribute="leading" constant="12" id="yCC-it-7qr"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lb1-zY-WEj">
                                 <rect key="frame" x="587" y="0.0" width="30" height="118"/>

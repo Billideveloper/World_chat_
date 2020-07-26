@@ -13,7 +13,7 @@ struct UIObjectsdesigns {
     func setlabeltext(title: String, subtitle:String) -> NSMutableAttributedString{
         
         
-        let titleattribute = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.init(name: "Didot", size: 28)!, NSAttributedString.Key.foregroundColor: UIColor.black])
+        let titleattribute = NSMutableAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.init(name: "Didot", size: 28)!, NSAttributedString.Key.foregroundColor: UIColor(named: "RecieverColor")!])
         
         let subtitleattribute = NSMutableAttributedString(string: subtitle, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor(white: 0, alpha: 0.45)])
         

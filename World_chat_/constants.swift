@@ -27,4 +27,5 @@ struct F {
     static let MessageDate = "Message_Time"
     static let Message_body = "Message"
     static let SenderID = "User_ID"
+    static let Message_ID = "Message_ID"
 }

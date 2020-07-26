@@ -76,6 +76,7 @@ class chatVC: UIViewController {
         
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         
         // registered customtableview cell and then move to tableview data source method cellforrowAt

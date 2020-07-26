@@ -45,6 +45,7 @@ import UIKit
             self.layer.cornerRadius = self.layer.frame.height / 3
             self.layer.borderWidth = 1
             self.layer.borderColor = color.cgColor
+            self.tintColor = color
             
         }
         

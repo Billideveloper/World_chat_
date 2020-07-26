@@ -11,12 +11,12 @@ import FirebaseAuth
 
 extension chatVC: UITableViewDataSource{
     
-
+    
     //MARK: -  load messages from firestore method
     
     func loadMessages(){
         
-    
+        
         if Auth.auth().currentUser != nil{
             
             db.collection(F.WorldMessages).order(by: F.MessageDate).addSnapshotListener{ (Msanpshot, error) in
@@ -56,8 +56,6 @@ extension chatVC: UITableViewDataSource{
                             
                         }
                         
-                        
-                        
                     }
                     
                 }
@@ -72,7 +70,7 @@ extension chatVC: UITableViewDataSource{
     
     //MARK: - send message method
     
-
+    
     func sendMessages(){
         
         
@@ -81,7 +79,7 @@ extension chatVC: UITableViewDataSource{
             
             let mymessagedata = [F.senderName: sendername, F.senderEmail :senderemail,
                                  F.MessageDate: Date().timeIntervalSince1970, F.Message_body : message,
-                                 F.SenderID: senderID
+                                 F.SenderID: senderID 
                 ] as [String : Any]
             
             
@@ -98,7 +96,6 @@ extension chatVC: UITableViewDataSource{
                         self.messagefield.text = ""
                     }
                 }
-                
                 
             }
         }
@@ -119,6 +116,9 @@ extension chatVC: UITableViewDataSource{
         let message = messages[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Messages.CellIdentifier , for: indexPath) as! MessageCell
+        
+        
+
         
         if message.senderEmail == currentuser?.email{
             
@@ -145,4 +145,61 @@ extension chatVC: UITableViewDataSource{
     }
     
     
+}
+
+extension chatVC: UITableViewDelegate{
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        
+        let delet = deletmsg(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [delet])
+    }
+    
+    func deletmsg(at indexPath: IndexPath) -> UIContextualAction{
+        
+        var action = UIContextualAction()
+        
+        let message = messages[indexPath.row]
+        
+        if currentuser?.email == message.senderEmail{
+            
+            action = UIContextualAction(style: .normal, title: "delet") { (action, view, completion) in
+                
+                
+                let doc_id = self.db.collection(F.WorldMessages).document()
+                print(doc_id)
+                self.messages.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                completion(true)
+                
+            }
+            action.image = UIGraphicsImageRenderer(size: CGSize(width: 40, height: 40)).image{ _ in
+                UIImage(named: "delet_btn")?.draw(in: CGRect(x: 0, y: 0, width: 35, height: 35))
+            }
+            
+            action.backgroundColor = .white
+            
+        }else{
+            
+            action = UIContextualAction(style: .normal, title: "\(message.senderName)", handler: { (action, view, complete) in
+                print("your email")
+            })
+            action.backgroundColor = UIColor(named: "senderColor")
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        return action
+    }
+    
+
 }
