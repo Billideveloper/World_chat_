@@ -33,8 +33,7 @@ extension chatVC: UITableViewDataSource{
                 if let snapsdocs = Msanpshot?.documents{
                     
                     for doc in snapsdocs{
-                        
-                        
+                    
                         let data = doc.data()
                         
                         if let senderName = data[F.senderName] as? String
@@ -93,6 +92,7 @@ extension chatVC: UITableViewDataSource{
                         return true
                     }
                     DispatchQueue.main.async {
+                        
                         self.messagefield.text = ""
                     }
                 }
@@ -112,6 +112,7 @@ extension chatVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         
         let message = messages[indexPath.row]
         
@@ -169,8 +170,11 @@ extension chatVC: UITableViewDelegate{
             action = UIContextualAction(style: .normal, title: "delet") { (action, view, completion) in
                 
                 
-                let doc_id = self.db.collection(F.WorldMessages).document()
-                print(doc_id)
+                //MARK: - delet method
+                self.deletdoc(date: message.senderDate)
+                
+            
+            
                 self.messages.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 completion(true)
@@ -201,5 +205,34 @@ extension chatVC: UITableViewDelegate{
         return action
     }
     
+    
+    
+    func deletdoc(date: Double){
+        
+        self.db.collection(F.WorldMessages).whereField(F.MessageDate, isEqualTo: date).addSnapshotListener { (snapshot, error) in
+            if error != nil{
+                print(error?.localizedDescription as Any)
+            }
+            
+            
+            if let snapdocs = snapshot?.documents{
+                
+                
+                for doc in snapdocs{
+                    let doc_Id = doc.documentID
+                    
+                    
+                    self.db.collection(F.WorldMessages).document(doc_Id).delete { (error) in
+                        print("deleted sucessfully")
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
+        
+    }
 
 }
