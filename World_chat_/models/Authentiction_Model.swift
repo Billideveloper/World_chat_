@@ -22,7 +22,6 @@ struct Authentiction_Model {
                 
                 print("Sucessfully registered user")
                 
-                
                 let updateprofile =  Auth.auth().currentUser?.createProfileChangeRequest()
                 updateprofile?.displayName = name
                 updateprofile?.commitChanges(completion: { (error) in

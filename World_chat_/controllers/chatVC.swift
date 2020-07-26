@@ -30,6 +30,7 @@ class chatVC: UIViewController {
 
     var authUser = Authentiction_Model()
     
+    
     //MARK: - view methods
     
     override func viewDidLoad() {
@@ -87,6 +88,7 @@ class chatVC: UIViewController {
         loadMessages()
         
         
+        
     }
     
 
@@ -97,7 +99,7 @@ class chatVC: UIViewController {
     @IBAction func send_Message_Pressed(_ sender: Any) {
         
         sendMessages()
-        
+    
     }
     
     

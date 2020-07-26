@@ -41,7 +41,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="Vwo-DS-9WN"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="6"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -102,7 +102,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="7NV-0n-uhc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="6"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -135,9 +135,11 @@
                 <outlet property="leftUserView" destination="hSp-rP-sO3" id="sML-xu-fVe"/>
                 <outlet property="loggedInUserImage" destination="SLI-kd-kLY" id="kXL-t3-P9b"/>
                 <outlet property="loggedInUserName" destination="lkB-CP-YTB" id="7BJ-hI-XXW"/>
+                <outlet property="lview" destination="zTv-cD-KlM" id="kxW-pH-F4h"/>
                 <outlet property="message" destination="0OU-In-lMS" id="EQV-GQ-6c3"/>
                 <outlet property="message_Background" destination="xqT-Lz-LbD" id="oC4-wC-iMU"/>
                 <outlet property="rightUserView" destination="Lb1-zY-WEj" id="qdr-qI-OsM"/>
+                <outlet property="rview" destination="ERc-8c-e7v" id="eG2-Zh-KHV"/>
             </connections>
             <point key="canvasLocation" x="236.95652173913047" y="27.455357142857142"/>
         </tableViewCell>

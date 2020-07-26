@@ -16,8 +16,7 @@ extension chatVC: UITableViewDataSource{
     
     func loadMessages(){
         
-        
-        
+    
         if Auth.auth().currentUser != nil{
             
             db.collection(F.WorldMessages).order(by: F.MessageDate).addSnapshotListener{ (Msanpshot, error) in
@@ -73,7 +72,7 @@ extension chatVC: UITableViewDataSource{
     
     //MARK: - send message method
     
-    
+
     func sendMessages(){
         
         
@@ -92,7 +91,9 @@ extension chatVC: UITableViewDataSource{
                     print(e.localizedDescription)
                 }else{
                     
-                    
+                    func messagestate() -> Bool{
+                        return true
+                    }
                     DispatchQueue.main.async {
                         self.messagefield.text = ""
                     }
@@ -123,7 +124,7 @@ extension chatVC: UITableViewDataSource{
             
             cell.rightUserView.isHidden = false
             cell.leftUserView.isHidden = true
-            cell.message.textAlignment = .right
+            //cell.message.textAlignment = .right
             cell.loggedInUserName.text = message.senderName
             cell.message_Background.backgroundColor = UIColor(named: "senderColor")
             
@@ -131,7 +132,7 @@ extension chatVC: UITableViewDataSource{
         }else{
             cell.leftUserView.isHidden = false
             cell.rightUserView.isHidden = true
-            cell.message.textAlignment = .left
+            //cell.message.textAlignment = .left
             cell.anotherUserName.text = message.senderName
             cell.message_Background.backgroundColor = UIColor(named: "RecieverColor")
             

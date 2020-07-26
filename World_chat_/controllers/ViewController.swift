@@ -80,7 +80,6 @@ class ViewController: UIViewController {
     @IBAction func signInUser(_ sender: Any) {
         
         
-    
         if let email = email.text , let password = password.text{
             
             authUser.signinuser(email: email, password: password, controller: self)

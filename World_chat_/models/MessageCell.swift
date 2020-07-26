@@ -18,6 +18,10 @@ class MessageCell: UITableViewCell {
     
     @IBOutlet weak var leftUserView: UIView!
     
+    @IBOutlet weak var lview: UIStackView!
+    
+    @IBOutlet weak var rview: UIStackView!
+    
     @IBOutlet weak var rightUserView: UIView!
     
     @IBOutlet weak var loggedInUserImage: UIImageView!
