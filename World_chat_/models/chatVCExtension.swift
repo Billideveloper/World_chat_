@@ -9,8 +9,9 @@
 import UIKit
 import FirebaseAuth
 
+
+
 extension chatVC: UITableViewDataSource{
-    
     
     //MARK: -  load messages from firestore method
     
@@ -50,6 +51,8 @@ extension chatVC: UITableViewDataSource{
                             DispatchQueue.main.async {
                                 
                                 self.tableView.reloadData()
+                                
+                                self.scroll()
                             }
                             
                             
@@ -94,6 +97,7 @@ extension chatVC: UITableViewDataSource{
                     DispatchQueue.main.async {
                         
                         self.messagefield.text = ""
+                    
                     }
                 }
                 
@@ -118,8 +122,9 @@ extension chatVC: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Messages.CellIdentifier , for: indexPath) as! MessageCell
         
-        
-
+        var Mindexpath: IndexPath?{
+               return self.tableView.indexPath(for: cell)
+           }
         
         if message.senderEmail == currentuser?.email{
             
@@ -127,7 +132,7 @@ extension chatVC: UITableViewDataSource{
             cell.leftUserView.isHidden = true
             //cell.message.textAlignment = .right
             cell.loggedInUserName.text = message.senderName
-            cell.message_Background.backgroundColor = UIColor(named: "senderColor")
+            cell.message_Background.backgroundColor = UIColor(named: "RecieverColor")
             
             
         }else{
@@ -135,7 +140,7 @@ extension chatVC: UITableViewDataSource{
             cell.rightUserView.isHidden = true
             //cell.message.textAlignment = .left
             cell.anotherUserName.text = message.senderName
-            cell.message_Background.backgroundColor = UIColor(named: "RecieverColor")
+            cell.message_Background.backgroundColor = UIColor(named: "senderColor")
             
         }
         
@@ -149,6 +154,7 @@ extension chatVC: UITableViewDataSource{
 }
 
 extension chatVC: UITableViewDelegate{
+    
     
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -169,12 +175,9 @@ extension chatVC: UITableViewDelegate{
             
             action = UIContextualAction(style: .normal, title: "delet") { (action, view, completion) in
                 
-                
                 //MARK: - delet method
-                self.deletdoc(date: message.senderDate)
+                self.messageAction.deletdoc(field: F.MessageDate, value: message.senderDate)
                 
-            
-            
                 self.messages.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 completion(true)
@@ -189,50 +192,43 @@ extension chatVC: UITableViewDelegate{
         }else{
             
             action = UIContextualAction(style: .normal, title: "\(message.senderName)", handler: { (action, view, complete) in
-                print("your email")
+                
             })
             action.backgroundColor = UIColor(named: "senderColor")
             
-            
-            
-            
-            
-            
         }
-        
-        
         
         return action
     }
     
+ 
+    func screolltable(indexPath: IndexPath){
+        
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+
+    }
     
     
-    func deletdoc(date: Double){
-        
-        self.db.collection(F.WorldMessages).whereField(F.MessageDate, isEqualTo: date).addSnapshotListener { (snapshot, error) in
-            if error != nil{
-                print(error?.localizedDescription as Any)
-            }
-            
-            
-            if let snapdocs = snapshot?.documents{
-                
-                
-                for doc in snapdocs{
-                    let doc_Id = doc.documentID
-                    
-                    
-                    self.db.collection(F.WorldMessages).document(doc_Id).delete { (error) in
-                        print("deleted sucessfully")
-                    }
-                }
-                
-            }
-            
-        }
-        
-        
-        
+    //MARK: - tableview scroll to newest message
+    
+    func scroll(){
+           
+                  if Auth.auth().currentUser != nil{
+                      
+                      let indexPath = NSIndexPath(row: messages.count - 1, section: 0)
+                      self.tableView.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+                      
+                  }
+       }
+    
+    
+    //MARK: - tableview scroll to first cell at top basically for timline view
+    
+    
+    func scrollToFirstRow() {
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: true)
     }
 
 }
+

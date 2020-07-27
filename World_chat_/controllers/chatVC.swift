@@ -27,9 +27,15 @@ class chatVC: UIViewController {
     
     var messages : [Message] = [
     ]
+    
+    var index = Int()
 
     var authUser = Authentiction_Model()
+  
+    var messageAction = Message_action()
+   
     
+
     
     //MARK: - view methods
     
@@ -77,8 +83,7 @@ class chatVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-    
-    
+        
         // registered customtableview cell and then move to tableview data source method cellforrowAt
         // and assign it as customMessage Cell
         
@@ -87,9 +92,6 @@ class chatVC: UIViewController {
         navigationItem.hidesBackButton = true
         
         loadMessages()
-        
-    
-        
         
         
     }

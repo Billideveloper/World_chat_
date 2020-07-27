@@ -21,3 +21,41 @@ struct Message {
     
 }
 
+
+struct Message_action {
+    
+    let db = Firestore.firestore()
+    
+    
+    
+    func deletdoc(field: String,value: Double){
+        
+        self.db.collection(F.WorldMessages).whereField(field, isEqualTo: value).addSnapshotListener { (snapshot, error) in
+            if error != nil{
+                print(error?.localizedDescription as Any)
+            }
+            
+            
+            if let snapdocs = snapshot?.documents{
+                
+                
+                for doc in snapdocs{
+                    let doc_Id = doc.documentID
+                    
+                    
+                    self.db.collection(F.WorldMessages).document(doc_Id).delete { (error) in
+                        print("deleted sucessfully")
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    
+}
+
