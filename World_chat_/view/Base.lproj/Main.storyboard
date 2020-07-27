@@ -65,6 +65,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo_chat" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-Sq-Cxs">
+                                <rect key="frame" x="20" y="257" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="MK7-Zp-KoQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -73,6 +79,9 @@
                             <constraint firstItem="GUx-1r-kWI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="IUk-Ap-4pn"/>
                             <constraint firstItem="3j7-xm-VRE" firstAttribute="top" secondItem="GUx-1r-kWI" secondAttribute="bottom" constant="10" id="Jk5-YW-y0k"/>
                             <constraint firstItem="3j7-xm-VRE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Twm-od-Oy7"/>
+                            <constraint firstItem="83x-3c-Ta8" firstAttribute="top" secondItem="wcP-Sq-Cxs" secondAttribute="bottom" constant="74.5" id="URZ-M3-WGB"/>
+                            <constraint firstItem="wcP-Sq-Cxs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="flU-W1-hX5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wcP-Sq-Cxs" secondAttribute="trailing" constant="20" id="iAi-XR-AZ2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="83x-3c-Ta8" secondAttribute="trailing" constant="10" id="kGD-dh-pM7"/>
                             <constraint firstItem="83x-3c-Ta8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nTr-8a-VZY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3j7-xm-VRE" secondAttribute="bottom" constant="20" id="qiT-ZV-npx"/>
@@ -94,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2954" y="127"/>
+            <point key="canvasLocation" x="2953.6231884057975" y="126.5625"/>
         </scene>
         <!--Register UserVC-->
         <scene sceneID="1rR-8j-ETU">
@@ -172,16 +181,25 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo_chat" translatesAutoresizingMaskIntoConstraints="NO" id="fvi-RA-1mt">
+                                <rect key="frame" x="20" y="86" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="TRV-cm-0BJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fvi-RA-1mt" firstAttribute="top" secondItem="ScE-Ae-YZR" secondAttribute="bottom" constant="20" id="8Wn-dm-mnd"/>
                             <constraint firstItem="Hyn-Zy-Gq4" firstAttribute="trailing" secondItem="iGJ-Dq-7xw" secondAttribute="trailing" constant="125" id="B93-jB-JXN"/>
                             <constraint firstItem="ScE-Ae-YZR" firstAttribute="leading" secondItem="Hyn-Zy-Gq4" secondAttribute="leading" constant="10" id="IQR-fC-UGp"/>
                             <constraint firstItem="Hyn-Zy-Gq4" firstAttribute="bottom" secondItem="iGJ-Dq-7xw" secondAttribute="bottom" constant="50" id="Mlz-xp-U3T"/>
                             <constraint firstItem="iGJ-Dq-7xw" firstAttribute="top" secondItem="IkL-Gh-PVR" secondAttribute="bottom" constant="25" id="SUz-aC-8Lv"/>
                             <constraint firstItem="IkL-Gh-PVR" firstAttribute="leading" secondItem="Hyn-Zy-Gq4" secondAttribute="leading" constant="10" id="TCb-fE-5xh"/>
                             <constraint firstItem="ScE-Ae-YZR" firstAttribute="top" secondItem="Hyn-Zy-Gq4" secondAttribute="top" id="bCM-gT-Nh5"/>
+                            <constraint firstItem="fvi-RA-1mt" firstAttribute="leading" secondItem="Hyn-Zy-Gq4" secondAttribute="leading" constant="20" id="kPD-E6-PzK"/>
                             <constraint firstItem="iGJ-Dq-7xw" firstAttribute="leading" secondItem="Hyn-Zy-Gq4" secondAttribute="leading" constant="125" id="m0W-Mp-his"/>
+                            <constraint firstItem="Hyn-Zy-Gq4" firstAttribute="trailing" secondItem="fvi-RA-1mt" secondAttribute="trailing" constant="20" id="rbk-n5-YY1"/>
                             <constraint firstItem="Hyn-Zy-Gq4" firstAttribute="trailing" secondItem="IkL-Gh-PVR" secondAttribute="trailing" constant="10" id="wH1-kg-Zci"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hyn-Zy-Gq4"/>
@@ -199,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHM-8W-00h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3739" y="127"/>
+            <point key="canvasLocation" x="3737.68115942029" y="126.5625"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="gXl-gf-VSa">
@@ -216,8 +234,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E46-HK-0nP">
                                 <rect key="frame" x="10" y="812" width="394" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type message " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-aQ-1PG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type message " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-aQ-1PG">
                                         <rect key="frame" x="0.0" y="0.0" width="349" height="40"/>
+                                        <color key="tintColor" red="1" green="0.54213580770000003" blue="0.56232991880000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -294,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app-logo_chat" width="500" height="500"/>
         <image name="clear" catalog="system" width="128" height="114"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <namedColor name="RecieverColor">

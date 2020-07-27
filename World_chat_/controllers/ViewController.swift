@@ -11,7 +11,7 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     
-    
+
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!
@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        continue_btn.isHidden = false
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -71,6 +72,8 @@ class ViewController: UIViewController {
         
         account_info.textAlignment = .center
         
+     
+        
 
     }
     
@@ -79,10 +82,13 @@ class ViewController: UIViewController {
     
     @IBAction func signInUser(_ sender: Any) {
         
-        
+ 
         if let email = email.text , let password = password.text{
             
             authUser.signinuser(email: email, password: password, controller: self)
+            
+            
+            
         }
         
     }

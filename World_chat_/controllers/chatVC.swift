@@ -84,6 +84,8 @@ class chatVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        messagefield.setalert(UIColor(named: "RecieverColor")!)
+        messagefield.setIconleft(UIImage(named: "app-logo_chat")!)
         // registered customtableview cell and then move to tableview data source method cellforrowAt
         // and assign it as customMessage Cell
         

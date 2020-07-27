@@ -52,17 +52,23 @@ struct Authentiction_Model {
     
     func signinuser(email:String , password: String, controller: UIViewController){
         
+        
+        
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            
             if error == nil{
-                
                 print("Sucessfully signed in user")
                 controller.navigationItem.title = Auth.auth().currentUser?.displayName
                 controller.performSegue(withIdentifier: "home", sender: nil)
+                controller.showToast(message: "Sucessfully signed In", font: .systemFont(ofSize: 14), backcolor: UIColor(named: "RecieverColor")!)
+                
             }
             else{
-                print("Sorry there is somethig error while signing in with email and password please try again with correct email and password")
+                controller.showToast(message: "Sorry Please SignIn again", font: .systemFont(ofSize: 14), backcolor: .red)
+                
             }
         }
+        
         
         
         

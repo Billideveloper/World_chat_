@@ -76,7 +76,7 @@ extension chatVC: UITableViewDataSource{
     
     func sendMessages(){
         
-        
+        self.sendMessage.tintColor = UIColor(named: "RecieverColor")
         if let message = messagefield.text , let sendername = Auth.auth().currentUser?.displayName , let senderemail = Auth.auth().currentUser?.email, let senderID = currentuser?.uid{
             
             
@@ -98,6 +98,7 @@ extension chatVC: UITableViewDataSource{
                     DispatchQueue.main.async {
                         
                         self.messagefield.text = ""
+                        self.sendMessage.tintColor = .black
                     
                     
                     }

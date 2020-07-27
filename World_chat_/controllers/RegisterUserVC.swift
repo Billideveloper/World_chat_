@@ -59,7 +59,7 @@ class RegisterUserVC: UIViewController {
 
 
     @IBAction func dismiss_VC(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
 
     }
     
@@ -69,8 +69,21 @@ class RegisterUserVC: UIViewController {
         
         if let email = userEmail.text , let password = userPassword.text , let name = userName.text{
             
-            authUser.registeruser(email: email, password: password, name: name, controller: self)
+            if userPassword.text != reenterpassword.text{
+                
+                self.showToast(message: "your passwords do not match", font: .systemFont(ofSize: 12), backcolor: UIColor(named: "RecieverColor")!)
+                
+            }else{
+                
+                authUser.registeruser(email: email, password: password, name: name, controller: self)
+                
+            }
             
+            
+            
+        }else{
+            
+            textfiledUI()
         }
         
     }
@@ -98,7 +111,17 @@ class RegisterUserVC: UIViewController {
         
     }
     
-    
+    func textfiledUI(){
+        
+        
+        if userPassword.text != nil , reenterpassword.text != nil , userName.text != nil, userEmail != nil{
+            
+            if userPassword.text != reenterpassword.text {
+                self.showToast(message: "please enter in all fields", font: .systemFont(ofSize: 12), backcolor: UIColor(named: "RecieverColor")!)
+            }
+        }
+        
+    }
     
     
 }
