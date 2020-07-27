@@ -29,6 +29,8 @@
 		18939AD124CAFB5C0035F8AC /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18939ACF24CAFB5C0035F8AC /* MessageCell.xib */; };
 		18DFC89624CE9AB900803B41 /* alert_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC89524CE9AB900803B41 /* alert_view.swift */; };
 		18DFC89824CEC92D00803B41 /* Toast_alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC89724CEC92D00803B41 /* Toast_alert.swift */; };
+		18DFC89B24CED3C700803B41 /* world_chat_public_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFC89924CED3C600803B41 /* world_chat_public_screenshot.png */; };
+		18DFC89C24CED3C700803B41 /* world_chat_public_screenshot 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DFC89A24CED3C600803B41 /* world_chat_public_screenshot 2.png */; };
 		57387842654015E320849A66 /* Pods_World_chat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90EEAE278CE6783567E78F33 /* Pods_World_chat_Tests.framework */; };
 		A3A614D020A36C2DF827B623 /* Pods_World_chat_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0947E1656B9B181149572782 /* Pods_World_chat_.framework */; };
 		B404F97F14AC88A1AF7E1A91 /* Pods_World_chat__World_chat_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE0BAEDDEF6A8AAE243327 /* Pods_World_chat__World_chat_UITests.framework */; };
@@ -82,6 +84,8 @@
 		18939ACF24CAFB5C0035F8AC /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		18DFC89524CE9AB900803B41 /* alert_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert_view.swift; sourceTree = "<group>"; };
 		18DFC89724CEC92D00803B41 /* Toast_alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast_alert.swift; sourceTree = "<group>"; };
+		18DFC89924CED3C600803B41 /* world_chat_public_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = world_chat_public_screenshot.png; sourceTree = "<group>"; };
+		18DFC89A24CED3C600803B41 /* world_chat_public_screenshot 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "world_chat_public_screenshot 2.png"; sourceTree = "<group>"; };
 		2F670294C2F2DEDF715ECC16 /* Pods-World_chat_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_/Pods-World_chat_.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2547CE5FCE7F847419DE08 /* Pods-World_chat_-World_chat_UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0148E3CD2313626B24F6E8 /* Pods-World_chat_-World_chat_UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.release.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				186A08CD24C86EA100A06414 /* view */,
 				186A08CE24C86EB000A06414 /* controllers */,
 				186A08A624C86E8900A06414 /* Assets.xcassets */,
+				18DFC89A24CED3C600803B41 /* world_chat_public_screenshot 2.png */,
+				18DFC89924CED3C600803B41 /* world_chat_public_screenshot.png */,
 				186A08A824C86E8900A06414 /* LaunchScreen.storyboard */,
 				186A08AB24C86E8900A06414 /* Info.plist */,
 				18939A8124C9BBE90035F8AC /* GoogleService-Info.plist */,
@@ -344,7 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18939AD124CAFB5C0035F8AC /* MessageCell.xib in Resources */,
+				18DFC89C24CED3C700803B41 /* world_chat_public_screenshot 2.png in Resources */,
 				186A08AA24C86E8900A06414 /* LaunchScreen.storyboard in Resources */,
+				18DFC89B24CED3C700803B41 /* world_chat_public_screenshot.png in Resources */,
 				18939A8224C9BBE90035F8AC /* GoogleService-Info.plist in Resources */,
 				186A08A724C86E8900A06414 /* Assets.xcassets in Resources */,
 				186A08A224C86E8700A06414 /* Main.storyboard in Resources */,
