@@ -27,6 +27,7 @@
 		18939ACD24CAF79D0035F8AC /* chatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18939ACC24CAF79D0035F8AC /* chatVCExtension.swift */; };
 		18939AD024CAFB5C0035F8AC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18939ACE24CAFB5C0035F8AC /* MessageCell.swift */; };
 		18939AD124CAFB5C0035F8AC /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18939ACF24CAFB5C0035F8AC /* MessageCell.xib */; };
+		18DFC89624CE9AB900803B41 /* alert_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC89524CE9AB900803B41 /* alert_view.swift */; };
 		57387842654015E320849A66 /* Pods_World_chat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90EEAE278CE6783567E78F33 /* Pods_World_chat_Tests.framework */; };
 		A3A614D020A36C2DF827B623 /* Pods_World_chat_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0947E1656B9B181149572782 /* Pods_World_chat_.framework */; };
 		B404F97F14AC88A1AF7E1A91 /* Pods_World_chat__World_chat_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE0BAEDDEF6A8AAE243327 /* Pods_World_chat__World_chat_UITests.framework */; };
@@ -78,6 +79,7 @@
 		18939ACC24CAF79D0035F8AC /* chatVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatVCExtension.swift; sourceTree = "<group>"; };
 		18939ACE24CAFB5C0035F8AC /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		18939ACF24CAFB5C0035F8AC /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		18DFC89524CE9AB900803B41 /* alert_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert_view.swift; sourceTree = "<group>"; };
 		2F670294C2F2DEDF715ECC16 /* Pods-World_chat_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_/Pods-World_chat_.debug.xcconfig"; sourceTree = "<group>"; };
 		3A2547CE5FCE7F847419DE08 /* Pods-World_chat_-World_chat_UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.debug.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B0148E3CD2313626B24F6E8 /* Pods-World_chat_-World_chat_UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World_chat_-World_chat_UITests.release.xcconfig"; path = "Target Support Files/Pods-World_chat_-World_chat_UITests/Pods-World_chat_-World_chat_UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				18939ACA24CAF5E40035F8AC /* Message_Model.swift */,
 				18939ACC24CAF79D0035F8AC /* chatVCExtension.swift */,
 				18939ACE24CAFB5C0035F8AC /* MessageCell.swift */,
+				18DFC89524CE9AB900803B41 /* alert_view.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				18939AD024CAFB5C0035F8AC /* MessageCell.swift in Sources */,
 				186A08A524C86E8700A06414 /* World_chat_.xcdatamodeld in Sources */,
 				18939AC924CAF4EE0035F8AC /* constants.swift in Sources */,
+				18DFC89624CE9AB900803B41 /* alert_view.swift in Sources */,
 				18939AC524CA8F970035F8AC /* Authentiction_Model.swift in Sources */,
 				18939AC724CAA2530035F8AC /* chatVC.swift in Sources */,
 				186A089D24C86E8700A06414 /* SceneDelegate.swift in Sources */,

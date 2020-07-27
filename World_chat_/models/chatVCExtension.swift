@@ -51,6 +51,7 @@ extension chatVC: UITableViewDataSource{
                             DispatchQueue.main.async {
                                 
                                 self.tableView.reloadData()
+                            
                                 
                                 self.scroll()
                             }
@@ -97,6 +98,7 @@ extension chatVC: UITableViewDataSource{
                     DispatchQueue.main.async {
                         
                         self.messagefield.text = ""
+                    
                     
                     }
                 }

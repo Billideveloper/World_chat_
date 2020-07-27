@@ -34,7 +34,7 @@ class chatVC: UIViewController {
   
     var messageAction = Message_action()
    
-    
+    var notification = alert_view()
 
     
     //MARK: - view methods
